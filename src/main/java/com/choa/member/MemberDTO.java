@@ -8,8 +8,8 @@ public class MemberDTO {
 	private String name;
 	private int age;
 	private String grade;
-	private String fname;
-	private String oname;
+	private String filename;
+	private String oriname;
 	public String getId() {
 		return id;
 	}
@@ -40,17 +40,18 @@ public class MemberDTO {
 	public void setGrade(String grade) {
 		this.grade = grade;
 	}
-	public String getFname() {
-		return fname;
+	
+	public String getFilename() {
+		return filename;
 	}
-	public void setFname(String fname) {
-		this.fname = fname;
+	public void setFilename(String filename) {
+		this.filename = filename;
 	}
-	public String getOname() {
-		return oname;
+	public String getOriname() {
+		return oriname;
 	}
-	public void setOname(String oname) {
-		this.oname = oname;
+	public void setOriname(String oriname) {
+		this.oriname = oriname;
 	}
 	
 	

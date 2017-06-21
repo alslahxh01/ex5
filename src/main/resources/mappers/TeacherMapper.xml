@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+  PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+  "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+  <!-- Mapper 파일 입니다 라고 셋팅시킴. -->
+  
+    <mapper namespace="TeacherMapper">
+  
+  <!-- 티쳐 회원가입 쿼리문 -->
+   <!-- 티쳐조인 -->
+<insert id="joinTeacher" parameterType="com.choa.member.teacher.TeacherDTO">
+ insert into teacher values(#{tid},#{subject},sysdate)
+</insert>  
+  
+  </mapper>
