@@ -8,7 +8,7 @@ public class FileDTO {
 	private String name;
 	private MultipartFile f1; //파라미터 이름과 동일 ★★★★★★★★★
 	
-	
+		
 	public String getName() {
 		return name;
 	}
