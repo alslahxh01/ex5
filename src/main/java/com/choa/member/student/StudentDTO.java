@@ -8,7 +8,6 @@ public class StudentDTO extends MemberDTO {
 	private String phone;
 	private String tid;
 	
-	
 	public String getSid() {
 		return sid;
 	}

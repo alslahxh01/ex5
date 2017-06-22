@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
+	<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -41,20 +42,19 @@
 			</p>
 			<p>이름<input type="text" name="name"></p>
 			<p>나이<input type="text" name="age"></p>
-			파일이름<input type="file" name="f1">
+		<p>	파일이름<input type="file" name="f1"></p>
 		</div>
-
+		
 		<!-- 학생 -->
 		<div>
-			sid : <input type="text" name="sid"> 폰<input type="text"
-				name="phone"> 선생아디<input type="text" name="tid">
+			 폰<input type="text" name="phone">
+			선생아디<input type="text" name="tid">
 		</div>
 
 		<!-- 선생 -->
 		<div>
-			<input type="text" name="tid"> 담당과목<input type="text"
-				name="subject"> 입사일<input type="date" name="hiredate">
-
+			 담당과목<input type="text" name="subject">
+			  입사일<input type="date" name="hiredate">
 		</div>
 
 		<input type="button" value="가입" id="btn">

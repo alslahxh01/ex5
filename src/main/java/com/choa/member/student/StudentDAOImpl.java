@@ -26,9 +26,24 @@ public class StudentDAOImpl implements MemberDAO{
 	
 		int result = sqlSession.insert(NAMESPACE2+"joinMember",memberDTO);
 		if(result >0){
-	 result = sqlSession.insert(NAMESPACE+"joinStudent",memberDTO);
+			result = sqlSession.insert(NAMESPACE+"joinStudent",memberDTO);
+			System.out.println("result : "+result);
 		}
 		return result;
+	}
+	@Override
+	public MemberDTO memberLogin(MemberDTO memberDTO) throws Exception {
+		return sqlSession.selectOne(NAMESPACE+"memberLogin",memberDTO);
+	}
+	
+	@Override
+	public MemberDTO memberPage(String id) throws Exception {
+			return sqlSession.selectOne(NAMESPACE+"memberPage",id);
+	}
+	
+	
+	public MemberDTO test(MemberDTO memberDTO){
+		return sqlSession.selectOne(NAMESPACE+"memberLogin",memberDTO);
 	}
 		
 	

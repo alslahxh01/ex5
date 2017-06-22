@@ -8,5 +8,9 @@
  <insert id="joinMember" parameterType="com.choa.member.MemberDTO">
   insert into member values(#{id},#{pw},#{name},#{age},#{grade},#{filename},#{oriname})
   </insert>
+  <select id="loginMember" parameterType="com.choa.member.MemberDTO" resultType="com.choa.member.MemberDTO"> 
+  select * from member where id=#{id} and pw = #{pw}
+  </select>
+
   
   </mapper>

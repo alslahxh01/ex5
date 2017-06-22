@@ -6,11 +6,20 @@
   <!-- Mapper 파일 입니다 라고 셋팅시킴. -->
   
     <mapper namespace="TeacherMapper">
+
+  <select id="memberLogin" parameterType="com.choa.member.MemberDTO" resultType="com.choa.member.teacher.TeacherDTO">
+  		 select M.*, S.* from MEMBER M, TEACHER S
+		where M.id=#{id} and M.pw=#{pw} and M.id=S.tid
+  </select>
+  
+  
   
   <!-- 티쳐 회원가입 쿼리문 -->
    <!-- 티쳐조인 -->
 <insert id="joinTeacher" parameterType="com.choa.member.teacher.TeacherDTO">
- insert into teacher values(#{tid},#{subject},sysdate)
+ insert into teacher values(#{id},#{subject},sysdate)
 </insert>  
-  
+   <select id="memberPage" parameterType="java.lang.String" resultType="com.choa.member.teacher.TeacherDTO">
+ 	select * from teacher where tid = #{id}
+ </select>
   </mapper>

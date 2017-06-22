@@ -52,8 +52,9 @@ public class FileUploadController {
 			FileSaver fs = new FileSaver();
 			String realPath = session.getServletContext().getRealPath("resources/upload");
 			
-			fs.filesave(realPath, fileDTO.getF1().getOriginalFilename(), fileDTO.getF1().getBytes());
-
+//			fs.filesave(realPath, fileDTO.getF1().getOriginalFilename(), fileDTO.getF1().getBytes());
+			fs.filesave(realPath, fileDTO.getF1());
+			
 		}
 		
 	

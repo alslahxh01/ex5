@@ -1,5 +1,7 @@
 package com.choa.member;
 
+import org.springframework.web.multipart.MultipartFile;
+
 public class MemberDTO {
 		
 
@@ -10,6 +12,14 @@ public class MemberDTO {
 	private String grade;
 	private String filename;
 	private String oriname;
+	private MultipartFile f1;
+	
+	public MultipartFile getF1() {
+		return f1;
+	}
+	public void setF1(MultipartFile f1) {
+		this.f1 = f1;
+	}
 	public String getId() {
 		return id;
 	}

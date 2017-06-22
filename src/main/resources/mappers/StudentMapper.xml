@@ -7,14 +7,17 @@
   
   <mapper namespace="StudentMapper">
   
+  <select id="memberLogin" parameterType="com.choa.member.MemberDTO" resultType="com.choa.member.student.StudentDTO">
+ select M.*, S.* from MEMBER M, STUDENT S
+		where M.id=#{id} and M.pw=#{pw} and M.id=S.sid
+  </select>
+  
   <!-- 회원가입 쿼리문 작성 -->
  
   <insert id="joinStudent" parameterType="com.choa.member.student.StudentDTO">
-  insert into student values(#{sid},#{phone},#{tid})
+  insert into student values(#{id},#{phone},#{id})
   </insert>
-  
-  
-  
-  
-  
+ 	
+
+
   </mapper>
